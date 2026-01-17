@@ -1,3 +1,4 @@
+#Comprehensive API testing project - Postman automation with 15 test cases, bug reporting & documentation
 
 **Tested API:** [Restful-Booker](https://restful-booker.herokuapp.com/)  
 **Testing Tool:** Postman  
