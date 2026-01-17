@@ -24,9 +24,6 @@ API returns 500 Internal Server Error when creating a booking without the `first
 - Status Code: `500 Internal Server Error`
 - Response: "Internal Server Error"
 
-### Impact
-Server crashes instead of gracefully handling invalid input. This indicates poor error handling and could affect API stability.
-
 ---
 
 ## Bug #2: API Accepts Negative Price
@@ -52,9 +49,6 @@ API accepts negative values for `totalprice` field without validation.
 ### Actual Result
 - Status Code: `200 OK`
 - Booking created successfully with negative price
-
-### Impact
-Business logic violation - hotel bookings cannot have negative prices. This could cause issues in payment processing and reporting.
 
 ---
 
@@ -82,9 +76,6 @@ API returns `405 Method Not Allowed` instead of `404 Not Found` when attempting 
 - Status Code: `405 Method Not Allowed`
 - Response: "Method Not Allowed"
 
-### Impact
-Incorrect HTTP status code could confuse API consumers. 405 typically means the HTTP method is not supported for the endpoint, not that the resource doesn't exist.
-
 ---
 
 ## Bug #4: Invalid Date Format Auto-Corrected
@@ -110,9 +101,6 @@ API accepts invalid date format (`DD-MM-YYYY`) and auto-corrects it to `YYYY-MM-
 ### Actual Result
 - Status Code: `200 OK`
 - Date automatically converted to correct format
-
-### Impact
-While auto-correction seems helpful, it may mask client-side errors and lead to incorrect date interpretations (e.g., 01-02-2024 could be Jan 2 or Feb 1 depending on interpretation).
 
 ---
 
