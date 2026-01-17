@@ -15,7 +15,7 @@
 - `POST /auth` - Generate authentication token
 
 ### Test Types
-- ✅ Positive Testing (Happy path scenarios)
+- ✅ Positive Testing
 - ✅ Negative Testing (Invalid data, missing fields)
 - ✅ Authentication Testing
 - ✅ Data Validation Testing
