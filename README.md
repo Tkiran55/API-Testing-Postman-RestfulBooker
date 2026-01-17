@@ -21,25 +21,6 @@
 - ✅ Data Validation Testing
 - ✅ Boundary Testing
 
-## 🐛 Bugs Found
-
-**Bug #1: Server Error on Missing Required Field**
-- **Severity:** High
-- **TC_007:** API returns 500 Internal Server Error when firstname is missing
-- **Expected:** 400 Bad Request
-- **Actual:** 500 Internal Server Error
-
-**Bug #2: Negative Price Accepted**
-- **Severity:** Medium
-- **TC_010:** API accepts negative totalprice values
-- **Expected:** 400 Bad Request with validation error
-- **Actual:** 200 OK, booking created with negative price
-
-**Bug #3: Incorrect Status Code for Invalid Resource**
-- **Severity:** Low
-- **TC_009, TC_015:** Returns 405 Method Not Allowed instead of 404 Not Found
-
----
 
 ## 📂 Project Structure
 ```
